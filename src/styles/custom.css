@@ -16,3 +16,29 @@ site-search,
 .sl-link-button:focus {
   text-decoration: none !important;
 }
+
+/* Hero Title - Try to keep it on one line on larger screens */
+.hero h1 {
+  width: max-content;
+  max-width: 100% !important;
+  font-size: clamp(var(--sl-text-3xl), 5vw, var(--sl-text-6xl)) !important;
+}
+
+/* Tagline styling */
+.hero .tagline {
+  display: block !important;
+  width: 100% !important;
+  text-align: right !important;
+  margin-top: 1rem !important;
+  line-height: 1.4 !important;
+  max-width: none !important;
+  font-size: var(--sl-text-xl) !important;
+}
+
+.hero .tagline em {
+  display: block;
+  font-style: italic;
+  font-size: var(--sl-text-base);
+  color: var(--sl-color-gray-3);
+  margin-top: 0.5rem;
+}
