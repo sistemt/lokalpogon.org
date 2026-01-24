@@ -19,6 +19,7 @@ export default defineConfig({
 				{ label: 'Statut', slug: 'statut' },
 				{ label: 'Kontakt', slug: 'contact' },
 			],
+			customCss: ['./src/styles/custom.css'],
 		}),
 	],
 });

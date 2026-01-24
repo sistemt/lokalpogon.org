@@ -1,0 +1,4 @@
+/* Hide "Overview" link in Table of Contents */
+starlight-toc a[href="#_top"] {
+  display: none !important;
+}
