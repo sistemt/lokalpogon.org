@@ -8,6 +8,9 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			plugins: [starlightThemeNova()],
+			components: {
+				Footer: './src/components/Footer.astro',
+			},
 			title: 'Prvolokalna',
 			locales: {
 				root: {

@@ -1,0 +1,40 @@
+---
+import type { Props } from '@astrojs/starlight/props';
+import Default from '@astrojs/starlight/components/Footer.astro';
+---
+
+<Default {...Astro.props}>
+	<slot />
+</Default>
+
+<footer class="custom-footer">
+	<div class="footer-links">
+		<a href="https://sistemt.org">sistemt.org</a>
+		<a href="https://git.sistemt.net">git.sistemt.net</a>
+		<a href="https://codeberg.org/sistemt">codeberg/sistemt</a>
+		<a href="https://github.com/sistemt">github/sistemt</a>
+	</div>
+</footer>
+
+<style>
+	.custom-footer {
+		margin-top: 2rem;
+		padding-top: 2rem;
+		border-top: 1px solid var(--sl-color-hairline);
+		display: flex;
+		justify-content: center;
+	}
+	.footer-links {
+		display: flex;
+		gap: 1.5rem;
+		flex-wrap: wrap;
+	}
+	.footer-links a {
+		color: var(--sl-color-text-accent);
+		text-decoration: none;
+		font-size: var(--sl-text-sm);
+	}
+	.footer-links a:hover {
+		text-decoration: underline;
+	}
+</style>
