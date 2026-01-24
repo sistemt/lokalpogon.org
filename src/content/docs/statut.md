@@ -4,7 +4,7 @@ sidebar:
   order: 2
 ---
 
-Na temelju članka 13. Zakona o udrugama ("Narodne novine", broj 74/2014), Skupština Razvojne Udruge Prvolokalna na sjednici održanoj 24. siječnja 2026. godine, na adresi Trg hrvatske mladeži 1, Kaštel Lukšić, donijela je  
+Na temelju članka 13. Zakona o udrugama ("Narodne novine", broj 74/2014), Skupština Razvojne Udruge Prvolokalna na sjednici održanoj 24. siječnja 2026. godine, na adresi Hrvatskih Branitelja 4, Kaštel Lukšić, donijela je  
 
 <div style="text-align: center; margin: 2rem 0;">
   <p style="font-size: 2.5rem; font-weight: bold;">STATUT PRVOLOKALNE</p>
