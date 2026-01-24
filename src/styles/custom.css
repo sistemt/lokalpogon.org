@@ -2,3 +2,17 @@
 starlight-toc a[href="#_top"] {
   display: none !important;
 }
+
+/* Hide search bar */
+site-search,
+.search-container,
+[data-open-modal] {
+  display: none !important;
+}
+
+/* Remove underline from LinkButtons */
+.sl-link-button,
+.sl-link-button:hover,
+.sl-link-button:focus {
+  text-decoration: none !important;
+}
