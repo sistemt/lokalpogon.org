@@ -23,17 +23,20 @@ U svrhu potpunosti nastavljam se na predloženi Statut i Ugovore između mene i 
 
 > [EU Akt o kibernetičkoj otpornosti](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/hrv), preambula, stavak 15, 18 i 20 te članak 3, stavak 48 
 
-Ako vam je pojam besplatni softver otvorenog koda odnosno slobodni softver zvuči kao nešto loše kvalitete molim da prije nastavka čitanja ove skice pročitate gore navedena 4 stavka, shvatite da vi cijelo vrijeme koristite [Linux](https://www.linux.org/) makar na webu i mobitelu, te primjer buduće uredske infrastrukture u razvoju Njemačke Vlade [openDesk](https://www.opendesk.eu/en).
+Ako vam je pojam besplatni softver otvorenog koda odnosno slobodni softver zvuči kao nešto loše kvalitete molim da prije nastavka čitanja ove skice:
+- pročitate gore navedena 4 stavka, 
+- shvatite da vi cijelo vrijeme koristite [Linux](https://www.linux.org/) makar na webu i mobitelu,
+- primjer buduće uredske infrastrukture u razvoju Njemačke Vlade [openDesk](https://www.opendesk.eu/en).
 
 Ovdje ću sažeto iznijeti i kratkoročni i dugoročni plan razvoja kroz 3 faze. Ovo nije poslovni plan nego razvojno-tehnički, al mislim da se operativno-poslovni da naslutit.
 
 Prva faza (1a) je nešto razumljivije i ne-tehničkim ljudima te nešto čemu se pristupa priko weba, mobitela il laptopa. Zamjena za Microsoft Office i Google Workspace, ali i puno više ...
 
-## FAZA 0
+## FAZA 0: wiki
 
-**sistemt.org** je doma tehničko-terenskog pokreta, wikipedia, dokumentacija, opis i sve ostalo. Ovde nema komercijale osim par linkova na Platformu sistemt.net i s vrimenom na listu podržanih suradnika (udruge, zadruge, privatnici...) na sistemt.com. Aktivni i zaslužni članovi Udruge dobiju `@sistemt.org` email. Al svaki član ima pravo na besplatnu razinu na `@sistemt.net`.
+**sistemt.org** je doma tehničko-terenskog pokreta, wikipedia, dokumentacija, opis i sve ostalo. Ovdi nema komercijale osim par linkova na Platformu sistemt.net i s vrimenom na listu podržanih suradnika (udruge, zadruge, privatnici...) na sistemt.com. Aktivni i zaslužni članovi Udruge dobiju `@sistemt.org` email. Al svaki član ima pravo na besplatnu razinu na `@sistemt.net`.
 
-## FAZA 1a
+## FAZA 1a: Uredska Platforma
 
 Projekt Njemačke vlade me nadahnija da idem do kraja [openDesk](https://www.opendesk.eu/en). Moja verzija su malo vitkiji programi i lakše za primjenit jednoj firmi, manje komplikacija (openDesk ide standardnim putem [Kubernetes](https://kubernetes.io/)), moj pristup je malo drukčiji, manje robusan za veliku platformu, ali robusniji za prebacit podatke firmi/zajednici da budu samodostatni sa svojim serverom. Neću ovu riječ ponavljat, ali praktički svaki od detalja šire Vizije je sam za sebe "Inovativan".
 
@@ -61,7 +64,7 @@ S tim da i dalje moš koristit platformu ka backup no to su već komplikacije da
 *TEHNIČKA NAPOMENA:*  
 `lit.` i `fx.` zasad će tražiti napraviti račun sa istim emailom na zotero.org, odnosno Mozilla.org. Oba dvi su isto udruge. Firefox već ima otvoreni kod za imat i račune na platformi al overkill su pa ću se samo za taj dio u početku oslonit na njih. Literatura je slična priča: dokumenti su kroz platformu al nam triba metadata zasad ić kroz njih, samo metadata, tako da onih 300MB besplatno šta ti daju je dovoljno. Da, nažalost na prvu neće baš sve sve ić kroz platformu, komplicirano je vrtit njihove servise pa će ovo bit riješeno (nadamo se) s vrimenom kroz izravni sync [SQLite](https://www.sqlite.org/) baze ([Litestream](https://litestream.io/), [Turso](https://turso.tech/) il slično). Hm, ovaj dio će radit, al mi nije plan riješen do kraja, triba inovativni vic potez da se rješi pa se odma zapričam o detaljima. Ajmo mi dalje ...
 
-## FAZA 1b
+## FAZA 1b: Infrastrukturna Platforma
 
 Da budem potpun dodat ću još neke servise koji u biti nisu aplikacije al će bit općeniti i ključni, ne moraš se obazirat na ovu fazu sada al dovoljno da ubaciš ovo na ChatAI i pitaš šta te zanima. Brzo postane jasno da ovo nije samo zamjena za Office nego temelj za radno-proizvodnu platformu industrijske snage, čak i vojne, ne daj Bože, al nek je ona moćna:
 
@@ -74,7 +77,7 @@ Da budem potpun dodat ću još neke servise koji u biti nisu aplikacije al će b
 - **boxai.sistemt.net** - sandbox za AI agente u cloud-u, npr vidi firmi naših ljudi otvorenom u New Yorku [Daytona](https://www.daytona.io/), čiji slobodni softver isto se isto nadam iskoristit. Za prvu ruku daju pojedinom korisniku izdašnu količinu svojih servera za besplatno koristit...
 - **...**
 
-## FAZA 2
+## FAZA 2: STROJ
 
 (razvija se paralelno sa 1, ali će biti kasnije od nje gotova)
 
@@ -101,23 +104,24 @@ Ovo mi je dite :-) Tri su ključna programa:
 
 Napomena: preda sam na [Linux Foundation](https://www.linuxfoundation.org/) odobranje za trademark da mogu koristit linux u imenu stranice linuxt.org i samog programa. No to je formalnost, odobre oni svakom samo staviš na naslovnu stranicu 'Linux Trademark is owned by Linus Torvalds' što je jasna stvar. No ukoliko bude komplikacija ovaj dio će se zvati [archt.org](https://archlinux.org/).
 
-## FAZA 3
+## FAZA 3: Digitalna Kičma Firme
 
 Ovo je naravno dugoročni projekt kojem neće u biti nikad biti kraja. Trenutno ne radim na ovo, ali zbog potpunosti da je jasno di stvari idu:
 
-- **erp.sistemt.net** - vođenje firme, knjige, transakcije, računi, isplate i njihovo sučelje prema ostalim dimenzijama firme, naročito pogon. Prve verzije kroz [Odoo](https://www.odoo.com/) uz transakcije kroz nešto kao [Formance](https://docs.formance.com/welcome). Makar kao "prepiska" za Dnevnik sa payment procesora. Pa po izvoru nastajanja probamo automatski nalijepiti klasifikaciju i razvrstavanje na Račune Knjiga. Njihovo sumiranje i sheme za ispunit Prezentaciju Knjiga Poreznoj maksimalno pripremiti da knjigovođa šta više radi sa Formom nego sa samom Materijom, a računovođa da ima urednije temelje za projekcije i ostale savjete...
-- **aps.sistemt.net** - integrirano sa erp, spuštanje u pogon. Plan i Schedule radnika, stroja, materijala i vrimena/sljeda. Za početak kroz [frePPLe](https://frepple.com/) i [MQTT](https://mqtt.org/) nizova sa mes pod-domene
-- **plm.sistemt.net** - prilagođen baš za 3D i nacrte, al ideja je da u biti bude jedno sa git.sistemt.net
-- **mes.sistemt.net** - u početku dosta sirovo, u biti samo terminal al lipi pogled na specijalno konfigurirano računalo sa sistemtMOS koji samo staviš u pogon i spojiš se na mašine. Zasad samo za povlačenje podataka sa mašina, a kako postane robusnije onda i za guranje na mašine sa vrimenom
-- **mos.sistemt.net** - današnjim terminom: OS za [PLC](https://en.wikipedia.org/wiki/Programmable_logic_controller). Vlastito računalo radnog stroja. ManuOS, sučelje čini cjelinu sa strojem. Ta šta bi mi linux značija bez terminala? Na prvu i ovo kao terminal.
+- **[erp.sistemt.net](https://en.wikipedia.org/wiki/Enterprise_resource_planning)** - vođenje firme, knjige, transakcije, računi, isplate i njihovo sučelje prema ostalim dimenzijama firme, naročito pogon. Prve verzije kroz [Odoo](https://www.odoo.com/) uz transakcije kroz nešto kao [Formance](https://docs.formance.com/welcome). Makar kao "prepiska" za Dnevnik sa payment procesora. Pa po izvoru nastajanja probamo automatski nalijepiti klasifikaciju i razvrstavanje na Račune Knjiga. Njihovo sumiranje i sheme za ispunit Prezentaciju Knjiga Poreznoj maksimalno pripremiti da knjigovođa šta više radi sa Formom nego sa samom Materijom, a računovođa da ima urednije temelje za projekcije i ostale savjete...
+    - u konačnici ovo bi evoluiralo u [**nrp.sistemt.net**](https://en.wikipedia.org/wiki/Network_resource_planning)
+- **[aps.sistemt.net](https://en.wikipedia.org/wiki/Advanced_planning_and_scheduling)** - integrirano sa erp, spuštanje u pogon. Plan i Schedule radnika, stroja, materijala i vrimena/sljeda. Za početak kroz [frePPLe](https://frepple.com/) i [MQTT](https://mqtt.org/) nizova sa mes pod-domene
+- **[plm.sistemt.net](https://en.wikipedia.org/wiki/Product_lifecycle)** - prilagođen baš za 3D i nacrte, al ideja je da u biti bude jedno sa git.sistemt.net
+- **[mes.sistemt.net](https://en.wikipedia.org/wiki/Manufacturing_execution_system)** - u početku dosta sirovo, u biti samo terminal al lipi pogled na specijalno konfigurirano računalo sa sistemtMOS koji samo staviš u pogon i spojiš se na mašine. Zasad samo za povlačenje podataka sa mašina, a kako postane robusnije onda i za guranje na mašine sa vrimenom
+- **[mos.sistemt.net](https://en.wikipedia.org/wiki/Programmable_logic_controller)** - današnjim terminom: OS za [PLC](https://en.wikipedia.org/wiki/Programmable_logic_controller). Vlastito računalo radnog stroja. ManuOS, sučelje čini cjelinu sa strojem. Ta šta bi mi linux značija bez terminala? Na prvu i ovo kao terminal.
 Za detalje što znače kratice upišite ih na en.wikipedia.org...
 
 Dakle,  
 prodaješ, kupuješ i zavedeš kroz `erp`,  
-inžinjerija kroz [GitOps](https://about.gitlab.com/topics/gitops/) `plm` isporučuje nužne artefakte na `aps` poslovnog ureda,  
+inžinjerija kroz [GitOps](https://en.wikipedia.org/wiki/DevOps) `plm` isporučuje nužne artefakte na `aps` poslovnog ureda,  
 oni kroz `mes` spuštaju i isprate u pogon ljudima i strojevima na njihova računala `mos`.  
 
-`erp` cilo vrime sluša na osovini `aps` <-> `mes` te maksimalno automatizirano referira, sumira i zavodi nužne stavke u Dnevnik i dalje u Račune Knjiga metodom REA.  
+`erp` cilo vrime sluša na osovini `aps` <-> `mes` te maksimalno automatizirano referira, sumira i zavodi nužne stavke u Dnevnik i dalje u Račune Knjiga metodom [REA](https://en.wikipedia.org/wiki/Resources,_Events,_Agents).  
 Cilj:  
 da društvene (i male osobne) tvrtke imaju najbolje ustrojenu **strukturu kapitalnih dobara u vremenu** te poraze sve druge tvrtke čistom tržišnom utakmicom !
 
