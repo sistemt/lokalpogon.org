@@ -1,5 +1,5 @@
 ---
-title: Statut Razvojne Udruge Prvolokalna
+title: Statut Razvojne Prvolokalne Udruge
 sidebar:
   order: 2
 ---
