@@ -7,6 +7,12 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'Prvolokalna',
+			locales: {
+				root: {
+					label: 'Hrvatski',
+					lang: 'hr',
+				},
+			},
 			pagefind: false,
 			sidebar: [
 				{ label: 'Plan', slug: 'plan' },
