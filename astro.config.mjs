@@ -21,6 +21,7 @@ export default defineConfig({
 			pagefind: false,
 			sidebar: [
 				{ label: 'Plan', slug: 'plan' },
+				{ label: 'Model', slug: 'model' },
 				{ label: 'Statut', slug: 'statut' },
 				{ label: 'Kontakt', slug: 'contact' },
 			],

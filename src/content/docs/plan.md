@@ -1,5 +1,5 @@
 ---
-title: Razvojni plan i Poslovni potencijal Pokreta
+title: Razvojni Plan
 ---
 
 Nemam volje uredno raspisivati niti velike potrebe iznositi vizije, planove i slično. Stvar će se pomalo graditi i zahuktavati.  
