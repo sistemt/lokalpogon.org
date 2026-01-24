@@ -42,3 +42,26 @@ site-search,
   color: var(--sl-color-gray-3);
   margin-top: 0.5rem;
 }
+
+/* Fix for missing list bullets in Markdown content caused by theme reset */
+.sl-markdown-content ul:not(:where(.not-content *)) {
+  list-style: disc;
+  padding-inline-start: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.sl-markdown-content ol:not(:where(.not-content *)) {
+  list-style: decimal;
+  padding-inline-start: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.sl-markdown-content li:not(:where(.not-content *)) {
+  margin-bottom: 0.25rem;
+}
+
+.sl-markdown-content li > ul,
+.sl-markdown-content li > ol {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
