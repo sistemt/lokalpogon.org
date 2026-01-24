@@ -2,8 +2,9 @@
 title: Razvojni plan i Poslovni potencijal Pokreta
 ---
 
-Nemam volje pisat u široko i budem li čeka ovo uredno reć ko zna kad ću...  
-No zadnjih sam dana kroz email poruke skicira neki brzi "pogled u daljinu", malo ga uredova i evo ga ovde. Bar nešto da imate osjećaj ozbiljnosti i ludosti puta preda mnom/nama ...
+Nemam volje uredno raspisivati niti velike potrebe iznositi vizije, planove i slično. Stvar će se pomalo graditi i zahuktavati.  
+
+No zadnjih sam dana kroz emailove skicira neki brzi "pogled u daljinu", malo ga uredova i ... sklepa ovu stranicu. Sirovo je i u dijalektu, ali bar ste sigurni da čitate riči čovika :-)  Bar nešto da kažem za osjećaj ozbiljnosti i ludosti puta preda mnom/nama.  
 
 ### Poslovni potencijal Udruge kao tvrtke
 
@@ -38,7 +39,10 @@ Prva faza (1a) je nešto razumljivije i ne-tehničkim ljudima te nešto čemu se
 
 ## FAZA 1a: Uredska Platforma
 
-Projekt Njemačke vlade me nadahnija da idem do kraja [openDesk](https://www.opendesk.eu/en). Moja verzija su malo vitkiji programi i lakše za primjenit jednoj firmi, manje komplikacija (openDesk ide standardnim putem [Kubernetes](https://kubernetes.io/)), moj pristup je malo drukčiji, manje robusan za veliku platformu, ali robusniji za prebacit podatke firmi/zajednici da budu samodostatni sa svojim serverom. Neću ovu riječ ponavljat, ali praktički svaki od detalja šire Vizije je sam za sebe "Inovativan".
+(ovo meni osobno većim dijelom ne triba, terminal sam maksimalist, al eto navikli ste ...)
+
+
+Projekt Njemačke vlade me nadahnija da idem do kraja: [openDesk](https://www.opendesk.eu/en). Moja verzija su malo vitkiji programi i lakše za primjenit jednoj firmi, manje komplikacija (openDesk ide standardnim putem [kuberneta](https://kubernetes.io/)), moj pristup je malo drukčiji, manje robusan za veliku platformu, ali robusniji za prebacit podatke firmi/zajednici da budu samodostatni sa svojim serverom. Neću ovu riječ ponavljat, ali praktički svaki od detalja šire Vizije je sam za sebe "Inovativan".
 
 Ključna napomena: sve ovo doli će biti javan kod te će pojedine firme moći imati svoj server na svojoj domeni te koristiti platformu kao backup, a sa pojedinim članovima sa strane dogovore integraciju, deployment i održavanje. Udruga izričito podržaje da njeni članovi otvaraju svoje firme koje se oslanjaju na infrastrukturu koja se razvija kod nje. Sistemt.net je da moš uplatit pretplatu firmi i ne razmišljat o ovom, ali mogućnost je uvik tu da firma/zajednica bude neovisna i samodostatna, koliko se već kome da potrudit...
 
