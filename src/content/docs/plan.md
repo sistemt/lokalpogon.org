@@ -51,11 +51,11 @@ Ovo je popis ključnih aplikacija:
 - **login.sistemt.net** - SSO (Single Sign On) i Portal. Logiraš se na jedno misto i sve ostale aplikacije se pokažu i jednostavno rade! Potiče se da za login postaviš i dodatno osiguranje: 2FA, passkey, hardver ključ ili eosobna, šta kome paše. Dakle nema zajebancije, stroga sigurnost, al ako baš ne želiš može sve i samo na lozinku, svakom njegovo... Za sad ću koristit [Authentik](https://goauthentik.io/), no ako bude potrebno dodatno uozbiljit ovaj segment onda ću zagrist zube i usvojit [Keycloak](https://www.keycloak.org/). No zasad je to overkill... možda dodam sa vrimenom i [Homarr](https://homarr.dev/) za fleksibilniji Portal, da možete dodat malo osobne note svom Portalu
 - **mail.sistemt.net** - server za email, kalendar i kontakte. Moš ovde kroz web il na laptop i mobitel. Podržava i sinkroniziranje sa kalendarom i kontaktima na Androidu. Znači cjelovito rješenje. Kroz [Stalwart](https://stalw.art/)
 - **git.sistemt.net** - za kod i modele, dakle spoj [GitHub](https://github.com/)-a i PLM-a. [Forgejo](https://forgejo.org/)
-- **drive.sistemt.net** - ka [Google Drive](https://www.google.com/drive/). [Nextcloud](https://nextcloud.com/) (openCloud)
+- **drive.sistemt.net** - ka Google Drive. Njemci su se oslonili na [Nextcloud Files](https://nextcloud.com/), no meni je to overkill te cu probrat pokoji go microservice iz [OpenClouda](https://opencloud.eu/en)
 - **office.sistemt.net** - word, excel, powerpoint u web browseru i na laptopu (linux). [Collabora Online](https://collaboraonline.github.io/)
-- **meet.sistemt.net** - video sastanci kroz [Jitsi](https://jitsi.org/)
+- **meet.sistemt.net** - video sastanci kroz [Jitsi](https://jitsi.org/). Neki koriste i matrix izravno, no skeptičan sam ... Zanimljiv mi je i projekt GNUa [Jami](https://jami.net/) jer je P2P
 - **matrix.sistemt.net** - [Matrix](https://matrix.org/) messenger, al ovo je još u igri, najviše bi volija stari XMPP, al matrix je dosta prihvaćen, čak i u javnim servisima zemalja ka Francuska i Njemačka
-- **pass.sistemt.net** - Password Manager kroz [Vaultwarden](https://github.com/dani-garcia/vaultwarden). Spajaš se kroz normalne [Bitwarden](https://bitwarden.com/) aplikacije: mobitel, browser, kompjuter, komand linija, ma sve i to sa službenim Bitwarden aplikacijama (uz [1Password](https://1password.com/) najbolja firma za ovo)
+- **pass.sistemt.net** - Password Manager kroz [Vaultwarden](https://github.com/dani-garcia/vaultwarden). Spajaš se kroz normalne [Bitwarden](https://bitwarden.com/) aplikacije: mobitel, browser, kompjuter, komand linija, ma sve i to sa službenim Bitwarden aplikacijama
 - **plan.sistemt.net** - planiranje projekta, kanban i slično. Nije ozbiljno ka za pogon nego više ovako za tim [OpenProject](https://www.openproject.org/)
 - **fx.sistemt.net** - račun za web browser, [Firefox](https://www.mozilla.org/firefox/)ov sync, dakle logiraš se u firefox sa ovim emailom i radi račun, bookmark i sve, na svim uređajima jedan povezani browser. Planiram podržat i [Brave](https://brave.com/), imaju već nešto. [Chromium](https://www.chromium.org/) za sad nije moguć, al pratim razvoj te čim bude razvijeno uklopim i njega. Al postoje i tu sad polu-alternative, npr samo bookmarks i history...
 - **lit.sistemt.net** - ovo radi lokalno i sinkronizira literaturu kroz platformu, oslanja se na [Zotero](https://www.zotero.org/). Literatura integrirana i u web browser i u notes, radi na laptopu, webu i mobitelu. Za sad je i dalje potreban račun na zotero.org,
@@ -66,6 +66,7 @@ S vrimenom izgraditi potpuno rješenje kroz sistemt.net platformu te sa nekim od
 S tim da i dalje moš koristit platformu ka backup no to su već komplikacije dalje budućnosti o kojima sada ne razmišljam nit sam dovoljno potkovan za smislit. Zasad...
 
 *TEHNIČKA NAPOMENA:*  
+(preskoči kome nije do tehničkih detalja ...)  
 `lit.` i `fx.` zasad će tražiti napraviti račun sa istim emailom na zotero.org, odnosno Mozilla.org. Oba dvi su isto udruge. Firefox već ima otvoreni kod za imat i račune na platformi al overkill su pa ću se samo za taj dio u početku oslonit na njih. Literatura je slična priča: dokumenti su kroz platformu al nam triba metadata zasad ić kroz njih, samo metadata, tako da onih 300MB besplatno šta ti daju je dovoljno. Da, nažalost na prvu neće baš sve sve ić kroz platformu, komplicirano je vrtit njihove servise pa će ovo bit riješeno (nadamo se) s vrimenom kroz izravni sync [SQLite](https://www.sqlite.org/) baze ([Litestream](https://litestream.io/), [Turso](https://turso.tech/) il slično). Hm, ovaj dio će radit, al mi nije plan riješen do kraja, triba inovativni vic potez da se rješi pa se odma zapričam o detaljima. Ajmo mi dalje ...
 
 ## FAZA 1b: Infrastrukturna Platforma
@@ -92,7 +93,9 @@ Dosta toga je već ucrtano i započeto, al kroz dogledno razdoblja triba(m) to i
 Ovo mi je dite :-) Tri su ključna programa:  
 **`linuxt` -> `sistemtOS` -> `git cad`** . Ili u skraćenoj verziji: `lxt` -> `st` -> `gt` ...
 
-- **linuxt** - kraće lxt, čitano 'elikst'. Low level izvršni program i što je bitno u ovoj priči: programska biblioteka. Pisana u programu [Rust](https://www.rust-lang.org/), dakle industrijski temelj. Većina neće imat dodira sa njom al ovo je srce sistema. Nastavlja se na [Linux](https://www.linux.org/) i okolni ekosistem, naročito [Git](https://git-scm.com/), [systemd](https://systemd.io/), terminal te windowse virtualno upakirane ka samo još jedan od procesa te spojene na grafičku karticu. CAD... Od svega ovoga na ovo sam najponosniji i najuživljeniji...
+- **linuxt** - kraće lxt, čitano 'elikst'. Low level izvršni program i što je bitno u ovoj priči: programska biblioteka. Pisana u programu [Rust](https://doc.rust-lang.org/stable/book/), dakle industrijski temelj. Većina neće imat dodira sa njom al ovo je srce sistema. Nastavlja se na [Linux](https://www.linux.org/) i okolni ekosistem, naročito [Git](https://git-scm.com/), [systemd](https://systemd.io/), terminal te windowse virtualno upakirane ka samo još jedan od procesa te [spojene na grafičku karticu](https://looking-glass.io/) za svrhe CADa...  
+Od svega ovoga na ovo sam najponosniji i najuživljeniji...
+
 - **sistemtOS** -> sučelje u potpuni operativni sistem i ostale funkcionalnosti za rad, istraživanje i razvoj. `st os` je zapravo "nježnije prepakirani" `lxt`. Ovde ću samo spomenit neke od komandi:
     - `st os` - u biti zapakiran `linuxt` za one koji nisu sistemaški programeri ili programeri uopće
     - `st net` - mrežno sučelje
@@ -106,7 +109,7 @@ Ovo mi je dite :-) Tri su ključna programa:
     - `...`
 - **gitcad** - takav tip alata za inžinjeriju trenutno nemamo, naročito ne slobodni softver. Integrira [Git](https://git-scm.com/) kojeg koristi cili programerski svit i inžinjerske CAD alate za modele, nacrte i tablice. Kad sazrije dovoljno biće revolucija svima, od studenata inženjerstva pa nadalje. Uz sistemt daje potpuni paket, pošalješ link i komanda `git cad <url>` ili `st clone <url>` i povuče se zadnja verzija modela i hash projekta, ako imaš jedan jedini file koji odgovara tom broju, stvar se jednostavno otvori i upali, windowsi, 3D, sve, al zapakirano ka samo jedan od procesa na linuxu i dodatne benefite koje nam to nosi...
 
-Napomena: preda sam na [Linux Foundation](https://www.linuxfoundation.org/) odobranje za trademark da mogu koristit linux u imenu stranice linuxt.org i samog programa. No to je formalnost, odobre oni svakom samo staviš na naslovnu stranicu 'Linux Trademark is owned by Linus Torvalds' što je jasna stvar. No ukoliko bude komplikacija ovaj dio će se zvati [archt.org](https://archlinux.org/).
+Napomena: uskoro cu predati na [Linux Foundation](https://www.linuxfoundation.org/) odobranje za trademark da mogu koristit linux u imenu stranice linuxt.org i samog programa. No to je formalnost, odobre oni svakom samo staviš na naslovnu stranicu 'Linux Trademark is owned by Linus Torvalds' što je jasna stvar. No ukoliko bude komplikacija ovaj dio će se zvati [archt](https://archt.org).
 
 ## FAZA 3: Digitalna Kičma Firme
 
@@ -122,10 +125,10 @@ Za detalje što znače kratice upišite ih na en.wikipedia.org...
 
 Dakle,  
 prodaješ, kupuješ i zavedeš kroz `erp`,  
-inžinjerija kroz [GitOps](https://en.wikipedia.org/wiki/DevOps) `plm` isporučuje nužne artefakte na `aps` poslovnog ureda,  
+inžinjerija metodologijom GitOps kroz `plm` razvija i isporučuje nužne artefakte na `aps` poslovnog ureda,  
 oni kroz `mes` spuštaju i isprate u pogon ljudima i strojevima na njihova računala `mos`.  
-
 `erp` cilo vrime sluša na osovini `aps` <-> `mes` te maksimalno automatizirano referira, sumira i zavodi nužne stavke u Dnevnik i dalje u Račune Knjiga metodom [REA](https://en.wikipedia.org/wiki/Resources,_Events,_Agents).  
+
 Cilj:  
 da društvene (i male osobne) tvrtke imaju najbolje ustrojenu **strukturu kapitalnih dobara u vremenu** te poraze sve druge tvrtke čistom tržišnom utakmicom !
 
