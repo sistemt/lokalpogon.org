@@ -134,14 +134,14 @@ da društvene (i male osobne) tvrtke imaju najbolje ustrojenu **strukturu kapita
 
 ## FAZA n
 
-Daleka budućnost, ako Bog da i volja se ne pokoleba te gornje tri faze dovoljno sazriju ide se na potpunu Platformu koja će primarno gurati i pružati proizvodna kapitalna dobra (samo amortizacija kao nadoknada) ostalim Udrugama i Zadrugama. Za referencu ću stavit meni osobno najbolji znanstvenog članka o tipovima novih proizvodnih platformi:
+Daleka budućnost, ako Bog da i volja se ne pokoleba te gornje tri faze dovoljno sazriju ide se na potpunu Platformu koja će primarno gurati i pružati proizvodna kapitalna dobra (samo amortizacija kao nadoknada) ostalim Udrugama i Zadrugama. Za referencu ću stavit meni osobno najbolji znanstveni članak o tipovima novih proizvodnih platformi:
 - [Platform-based Manufacturing](https://doi.org/10.1016/j.cirp.2023.04.091)
-- probrani članci triju ključnih papinskih enciklika Socijalnog Nauka rimokatoličke Crkve - [Localism](http://distributist.blogspot.com/2007/02/distributivism-and-catholic-social.html)
+- probrani članci triju ključnih papinskih enciklika Socijalnog Nauka rimokatoličke Crkve: [Lokalizam](http://distributist.blogspot.com/2007/02/distributivism-and-catholic-social.html)
 
-<br />
 <br />
 
 # ...
+
 *Bože,*  
 *nadahni glavu,*  
 *potakni trud,*  
