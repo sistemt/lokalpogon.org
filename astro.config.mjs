@@ -22,7 +22,14 @@ export default defineConfig({
 			sidebar: [
 				{ label: 'Plan', slug: 'plan' },
 				{ label: 'Model', slug: 'model' },
-				{ label: 'Statut', slug: 'statut' },
+				{
+					label: 'Dokumenti',
+					items: [
+						{ label: 'Pregled', slug: 'dokumenti' },
+						{ label: 'Statut', slug: 'statut' },
+						{ label: 'Strategija', slug: 'strategia' },
+					],
+				},
 				{ label: 'Kontakt', slug: 'contact' },
 			],
 			customCss: ['./src/styles/custom.css'],
