@@ -163,25 +163,13 @@ Djelatnosti kojima se ostvaruju ciljevi Udruge su:
 - izdavanje znanstvenih i stručnih publikacija,  
 - umrežavanje i međunarodna znanstvena i stručna suradnja.  
 
-### Održivi razvoj
-
-**Članak 10a.**
-
 **Održivi razvoj:**  
 - razvoj društvenog kapitala.  
-
-### Socijalna djelatnost
-
-**Članak 10b.**
 
 **Socijalna djelatnost:**  
 - pomoć i podrška djeci, mladima i obitelji,
 - pomoć i podrška osobama u riziku od siromaštva i socijalne isključenosti,  
 - poboljšanje kvalitete života socijalno isključenih osoba.  
-
-### Tehnička kultura
-
-**Članak 10c.**
 
 **Tehnička kultura:**  
 - informatika i računalstvo,  
