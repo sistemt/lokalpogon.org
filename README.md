@@ -1,10 +1,21 @@
-# Starlight Starter Kit: Basics
+# Jednostavna Statična web stranica Prvolokalne
 
-```
+Za izradu korišteni [bun](https://bun.com/), [astro](https://astro.build/) i [starlight](https://starlight.astro.build/).  
+Pogonjeno kroz [Cloudflare Pages](https://pages.cloudflare.com/).  
+
+## Upute za izradu ovakve stranice (.eng)
+For more details then this just ask chatai ...
+
+Install [bun](https://bun.com/docs/installation) and then:
+```sh
+# init the project
 bun create astro@latest -- --template starlight
+# add this theme or any other from https://starlight.astro.build/resources/themes/
+bun add starlight-theme-nova
 ```
+[Footers](./src/components/Footer.astro) and [style customizations](./src/styles/custom.css) is added separatelly in this project.  
 
-## 🚀 Project Structure
+### 🚀 Project Structure
 
 Inside of your Astro + Starlight project, you'll see the following folders and files:
 
@@ -21,13 +32,13 @@ Inside of your Astro + Starlight project, you'll see the following folders and f
 └── tsconfig.json
 ```
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+Starlight looks for `.md` or [`.mdx`](https://mdxjs.com/) files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
 
 Images can be added to `src/assets/` and embedded in Markdown with a relative link.
 
 Static assets, like favicons, can be placed in the `public/` directory.
 
-## 🧞 Commands
+### 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:
 
@@ -40,6 +51,6 @@ All commands are run from the root of the project, from a terminal:
 | `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `bun astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+### 👀 Want to learn more?
 
 Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
