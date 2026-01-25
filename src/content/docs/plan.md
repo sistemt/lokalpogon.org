@@ -26,7 +26,7 @@ U svrhu potpunosti nastavljam se na predloženi Statut i Ugovore između mene i 
 
 Ako vam je pojam besplatni softver otvorenog koda odnosno slobodni softver zvuči kao nešto loše kvalitete molim da prije nastavka čitanja ove skice:
 - pročitate gore navedena 4 stavka, 
-- shvatite da vi cijelo vrijeme koristite [Linux](https://www.linux.org/) makar na webu i mobitelu,
+- shvatite da vi cijelo vrijeme koristite [Linux](https://wiki.archlinux.org/title/Kernel) makar na webu i mobitelu,
 - primjer buduće uredske infrastrukture u razvoju Njemačke Vlade [openDesk](https://www.opendesk.eu/en).
 
 Ovdje ću sažeto iznijeti i kratkoročni i dugoročni plan razvoja kroz 3 faze. Ovo nije poslovni plan nego razvojno-tehnički, al mislim da se operativno-poslovni da naslutit.
@@ -75,8 +75,8 @@ Da budem potpun dodat ću još neke servise koji u biti nisu aplikacije al će b
 
 - **dns.sistemt.net** - standardni, ali i jedan dodatni specifičan DNS za peer-to-peer (P2P) linkove i dodavanja, vidi intra pod-domenu
 - **key.sistemt.net** - ovo je malo tehnički al da budem potpun: [PGP](https://www.openpgp.org/) ključevi i slično, ovo nije aplikacija nego server za šifre i potpisivanja
-- **intra.sistemt.net** - koordinacijski server za povezat se izravno u VPN, podaci teku izravno između nas, nadahnuto sa [Tailscale](https://tailscale.com/), al izvedbu gradim na primjerima [Innernet](https://github.com/tonarino/innernet), [Iroh](https://github.com/n0-computer/iroh) (čisti HTTP3), [vopono](https://github.com/jamesmcm/vopono) i naravno [WireGuard](https://www.wireguard.com/), ovisi koji tip aplikacije trenutno koristi intra pod-domenu
-- **img.sistemt.net** - za povlačenje "image" diskova, virtualnih mašina, kontenjera, operativnih sistema, iso itd. Ukratko sve šta može koristiti [libvirt](https://www.virt-tools.org/)/[QEMU](https://www.qemu.org/) za virtualke, [systemd](https://systemd.io/)/[Podman](https://podman.io/) za kontenjerizaciju il ka neka generička disk/FS slika
+- **intra.sistemt.net** - koordinacijski server za povezat se izravno u VPN, podaci teku izravno između nas, nadahnuto sa [Tailscale](https://tailscale.com/), al izvedbu gradim na primjerima [Innernet](https://github.com/tonarino/innernet), [Iroh](https://github.com/n0-computer/iroh) (čisti HTTP3), [vopono](https://github.com/jamesmcm/vopono) i naravno [WireGuard](https://wiki.archlinux.org/title/WireGuard), ovisi koji tip aplikacije trenutno koristi intra pod-domenu
+- **img.sistemt.net** - za povlačenje "image" diskova, virtualnih mašina, kontenjera, operativnih sistema, iso itd. Ukratko sve šta može koristiti [libvirt](https://www.virt-tools.org/)/[QEMU](https://wiki.archlinux.org/title/QEMU) za virtualke, [systemd](https://wiki.archlinux.org/title/Systemd)/[Podman](https://wiki.archlinux.org/title/Podman) za kontenjerizaciju il ka neka generička disk/FS slika
 - **pkg.sistemt.net/*** - paketi aplikacija za OS /[ALPM](https://wiki.archlinux.org/title/Pacman), [Python](https://www.python.org/) /uv , [Rust](https://www.rust-lang.org/) /cargo , [Go](https://go.dev/) /go ...
 - **obj.sistemt.net** - ka [Amazonov S3](https://aws.amazon.com/s3/). Inače bio bija [MinIO](https://min.io/) al su zastanili pa ću dizat na [Garage](https://garagehq.punkt.fr/). Ako ide na industrijsku cloud razinu onda bi valjalo [Ceph](https://ceph.io/) koristit za ovo. Zasad ne triba...
 - **boxai.sistemt.net** - sandbox za AI agente u cloud-u, npr vidi firmi naših ljudi otvorenom u New Yorku [Daytona](https://www.daytona.io/), čiji slobodni softver isto se isto nadam iskoristit. Za prvu ruku daju pojedinom korisniku izdašnu količinu svojih servera za besplatno koristit...
@@ -93,7 +93,7 @@ Dosta toga je već ucrtano i započeto, al kroz dogledno razdoblja triba(m) to i
 Ovo mi je dite :-) Tri su ključna programa:  
 **`linuxt` -> `sistemtOS` -> `git cad`** . Ili u skraćenoj verziji: `lxt` -> `st` -> `gt` ...
 
-- **linuxt** - kraće lxt, čitano 'elikst'. Low level izvršni program i što je bitno u ovoj priči: programska biblioteka. Pisana u programu [Rust](https://doc.rust-lang.org/stable/book/), dakle industrijski temelj. Većina neće imat dodira sa njom al ovo je srce sistema. Nastavlja se na [Linux](https://www.linux.org/) i okolni ekosistem, naročito [Git](https://git-scm.com/), [systemd](https://systemd.io/), terminal te windowse virtualno upakirane ka samo još jedan od procesa te [spojene na grafičku karticu](https://looking-glass.io/) za svrhe CADa...  
+- **linuxt** - kraće lxt, čitano 'elikst'. Low level izvršni program i što je bitno u ovoj priči: programska biblioteka. Pisana u programu [Rust](https://doc.rust-lang.org/stable/book/), dakle industrijski temelj. Većina neće imat dodira sa njom al ovo je srce sistema. Nastavlja se na [Linux](https://wiki.archlinux.org/title/Kernel) i okolni ekosistem, naročito [Git](https://git-scm.com/book/en/v2), [systemd](https://wiki.archlinux.org/title/Systemd), terminal te windowse virtualno upakirane ka samo još jedan od procesa te [spojene na grafičku karticu](https://looking-glass.io/) za svrhe CADa...  
 Od svega ovoga na ovo sam najponosniji i najuživljeniji...
 
 - **sistemtOS** -> sučelje u potpuni operativni sistem i ostale funkcionalnosti za rad, istraživanje i razvoj. `st os` je zapravo "nježnije prepakirani" `lxt`. Ovde ću samo spomenit neke od komandi:
@@ -107,7 +107,7 @@ Od svega ovoga na ovo sam najponosniji i najuživljeniji...
     - `st mes` - sučelje u pojedine industrijske strojeve ili njih više kroz pristupne točke interneta strojeva (tzv Industrie4.0)
     - `st org` - digitalna kičma troosovinske firme: Razvoj - Pogon - Račun uklopljenih u vremenu kroz ured Operative (pogonski ured)
     - `...`
-- **gitcad** - takav tip alata za inžinjeriju trenutno nemamo, naročito ne slobodni softver. Integrira [Git](https://git-scm.com/) kojeg koristi cili programerski svit i inžinjerske CAD alate za modele, nacrte i tablice. Kad sazrije dovoljno biće revolucija svima, od studenata inženjerstva pa nadalje. Uz sistemt daje potpuni paket, pošalješ link i komanda `git cad <url>` ili `st clone <url>` i povuče se zadnja verzija modela i hash projekta, ako imaš jedan jedini file koji odgovara tom broju, stvar se jednostavno otvori i upali, windowsi, 3D, sve, al zapakirano ka samo jedan od procesa na linuxu i dodatne benefite koje nam to nosi...
+- **gitcad** - takav tip alata za inžinjeriju trenutno nemamo, naročito ne slobodni softver. Integrira [Git](https://git-scm.com/book/en/v2) kojeg koristi cili programerski svit i inžinjerske CAD alate za modele, nacrte i tablice. Kad sazrije dovoljno biće revolucija svima, od studenata inženjerstva pa nadalje. Uz sistemt daje potpuni paket, pošalješ link i komanda `git cad <url>` ili `st clone <url>` i povuče se zadnja verzija modela i hash projekta, ako imaš jedan jedini file koji odgovara tom broju, stvar se jednostavno otvori i upali, windowsi, 3D, sve, al zapakirano ka samo jedan od procesa na linuxu i dodatne benefite koje nam to nosi...
 
 Napomena: uskoro cu predati na [Linux Foundation](https://www.linuxfoundation.org/) odobranje za trademark da mogu koristit linux u imenu stranice linuxt.org i samog programa. No to je formalnost, odobre oni svakom samo staviš na naslovnu stranicu 'Linux Trademark is owned by Linus Torvalds' što je jasna stvar. No ukoliko bude komplikacija ovaj dio će se zvati [archt](https://archt.org).
 
