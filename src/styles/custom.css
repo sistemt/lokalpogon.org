@@ -19,9 +19,17 @@ site-search,
 
 /* Hero Title - Try to keep it on one line on larger screens */
 .hero h1 {
-  width: max-content;
   max-width: 100% !important;
+  width: 100% !important;
   font-size: clamp(var(--sl-text-3xl), 5vw, var(--sl-text-6xl)) !important;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+@media (min-width: 50rem) {
+  .hero h1 {
+    width: max-content;
+  }
 }
 
 /* Tagline styling */
