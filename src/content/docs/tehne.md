@@ -3,9 +3,11 @@ title: Razvojni Plan Digitalne Tehnike
 id: tehne
 ---
 
-Nemam volje uredno raspisivati niti velike potrebe iznositi vizije, planove i slično. Stvar će se pomalo graditi i zahuktavati.  
+Trenutni dokument se bavi razradom [računalne komponente Tehničke fronte Operative](./operatio#racunalna) te spominje [proizvodnu komponentu](./operatio#proizvodna) u [Fazi n](#faza-n).  
 
-No zadnjih sam dana kroz emailove skicira neki brzi "pogled u daljinu", malo ga uredova i ... sklepa ovu stranicu. Sirovo je i u dijalektu, ali bar ste sigurni da čitate riči čovika :-)  Bar nešto da kažem za osjećaj ozbiljnosti i ludosti puta preda mnom/nama.  
+Iako će navedena tematika biti razrađivana na sistemt.org, s obzirom da su ovo prvi i sržni konkretni koraci, gruba skica je iznesena i ovdje.
+
+U sklopu osnivanja udruge kroz emailove sam skicira neki brzi "pogled u daljinu", malo ga uredova i ... sklepa ovaj "dokument". Sirovo je i u dijalektu, ali bar ste sigurni da čitate riči čovika :-)  Bar nešto da kažem za osjećaj ozbiljnosti i ludosti puta preda mnom/nama.  
 
 ### Poslovni potencijal Udruge kao tvrtke
 
