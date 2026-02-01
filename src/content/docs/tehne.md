@@ -1,5 +1,6 @@
 ---
-title: Razvojni Plan
+title: Razvojni Plan Digitalne Tehnike
+id: tehne
 ---
 
 Nemam volje uredno raspisivati niti velike potrebe iznositi vizije, planove i slično. Stvar će se pomalo graditi i zahuktavati.  

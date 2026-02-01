@@ -20,14 +20,26 @@ export default defineConfig({
 			},
 			pagefind: false,
 			sidebar: [
-				{ label: 'Plan', slug: 'plan' },
-				{ label: 'Model', slug: 'model' },
 				{
 					label: 'Dokumenti',
 					items: [
 						{ label: 'Pregled', slug: 'dokumenti' },
-						{ label: 'Statut', slug: 'statut' },
-						{ label: 'Strategija', slug: 'strategia' },
+						{
+							label: 'interni',
+							items: [
+								{ label: 'Operativa', slug: 'operatio' },
+								{ label: 'Ekonomia', slug: 'ekonomia' },
+								{ label: 'Tehnika', slug: 'tehne' },
+								{ label: 'Theoria', slug: 'theoria' },
+								{ label: 'Strategija', slug: 'strategia' },
+							],
+						},
+						{
+							label: 'službeni',
+							items: [
+								{ label: 'Statut', slug: 'statut' },
+							],
+						},
 					],
 				},
 				{ label: 'Kontakt', slug: 'contact' },
