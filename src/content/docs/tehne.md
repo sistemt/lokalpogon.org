@@ -3,7 +3,7 @@ title: Razvojni Plan Digitalne Tehnike
 id: tehne
 ---
 
-Trenutni dokument se bavi razradom [računalne komponente Tehničke fronte Operative](./operatio#racunalna) te spominje [proizvodnu komponentu](./operatio#proizvodna) u [Fazi n](#faza-n).  
+Trenutni dokument se bavi razradom [računalne komponente Tehničke fronte Operative](/operatio#racunalna) te spominje [proizvodnu komponentu](/operatio#proizvodna) u [Fazi n](#faza-n).  
 
 Iako će navedena tematika biti razrađivana na sistemt.org, s obzirom da su ovo prvi i sržni konkretni koraci, gruba skica je iznesena i ovdje.
 
