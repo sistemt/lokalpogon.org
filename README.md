@@ -1,4 +1,4 @@
-# Jednostavna Statična web stranica Prvolokalne
+# Jednostavna statična web stranica Prvolokalne
 
 Za izradu korišteni [bun](https://bun.com/), [astro](https://astro.build/) i [starlight](https://starlight.astro.build/).  
 Pogonjeno kroz [Cloudflare Pages](https://pages.cloudflare.com/).  
